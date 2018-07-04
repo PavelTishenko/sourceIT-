@@ -1,5 +1,34 @@
  "use strict"; // использование строгого режима
 
+// *************
+// var user = {
+//   name: "Vasya",
+//   age: 30,
+// };
+// console.log(user);
+
+// var arr = [{name: 'Vasya'}, {name : 'Koul'}];
+//  console.log(typeof arr[0])
+
+
+
+// function user (name, age) {
+//   this.name = name,
+//   this.age = age
+// }
+
+// let user1 = new user("Vasya", 34);
+// console.log(user1);
+
+// let user2 = new user ("Petya", 25);
+// console.log (user2);
+
+// let users = user1 === user2;
+// console.log(users);
+
+
+
+
 
 // //  Численное преобразование с помощью "+"
 // var a = +"123"; // "+" преобразует "123" в число
@@ -144,17 +173,17 @@
 
 // function checkNum(){
 //   var num = prompt("Enter login");
-//         if (num == "Admin"){
+//         if (num === "Admin"){
 //            var checkPass = prompt("Enter password");
-//                    if(checkPass == "Black King" ){
+//                    if(checkPass === "Black King" ){
 //                            alert("Welcome my King"); 
-//                    }else if (checkPass == null){
+//                    }else if (checkPass === null){
 //                            alert("You gona disconnect"); 
 //                    }else{
 //                            alert("Password incorect"); 
 //                    } ;
 
-//         }else if (num == null){
+//         }else if (num === null){
 //             alert("Disconnect");
 //         }else{
 //             alert("I dont know you");
@@ -166,10 +195,18 @@
 
 //**** Задачи функции 
 
-// function checkSmsng(a, b){
-//   (a + b < 4) ? alert('Small nmbr') : alert ('Big nmbr');
+// function checkSmthng(a, b){
+//   (a + b < 4) ? alert('Small nmbr')/* if (true) */ 
+//    : alert ('Big nmbr'); /* if (false) */ 
 // }
-// checkSmsng(2, 2);
+// checkSmthng(1, 2);
+
+// var val = 10 
+//           ? val > 10 
+//             ? console.log('You are right')
+//               : alert(':(')
+//           : alert(':(((((');  
+            
 
 
 //**** Задачи функции
@@ -210,6 +247,10 @@
 //   case 3 :
 //           alert("2, 3");
 // }
+
+
+//******************  Логические операторы 
+
 
 
 
