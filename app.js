@@ -211,5 +211,5 @@
 //           alert("2, 3");
 // }
 
-var num = prompt('Number');
+
 
