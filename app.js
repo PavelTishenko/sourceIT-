@@ -916,15 +916,7 @@
 //         var num = [1, 5, 3, 6, 10];
 //         reverced1(num);
 
-var arr = [1,2,3,4,5];
 
-function reverseArr() {
-
-    return console.log(arr.reverse());
-
-}
-
-reverseArr(arr);
 
 
 
