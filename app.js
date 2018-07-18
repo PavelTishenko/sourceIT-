@@ -689,7 +689,7 @@
 // var finalArr = [];
 
  
-// // верх квадрата
+// верх квадрата
 // for (var i = 0; i < arrL; i++) {
 // 	finalArr.push(arr[0][i]);
 // }
@@ -892,14 +892,120 @@
 // function reverced1(arr) {
 //         let rarr = [];
 //         for( let i = 0; i < arr.length; i++){      
-//                         rarr.push(arr[i]); 
-//                         }        
+//                         rarr.push(arr[i]);           
+// }         
+//         console.log(rarr);
+//         for (let j = 0; j <= arr.length/2; j++ ){
+//                 let t = rarr[arr.length - j];  
+//                 rarr[arr.length - j] = rarr[j] ; 
+//                 rarr[j] = t;      
+//         }
+//         console.log(rarr);       
+        
+        //let newArr = [];
+        //
+// }       
+             
 //                         // console.log(rarr);
-//         console.log(rarr.reverse()); 
-// }   
+          
+
+
+
+//  reverse полученного массива
+// function reverse1(arr){
+//         let rev1 = [];
+//         for(let i = 0, j = arr.length-1; i < j; i++, j--){               
+
+//         let rev = arr[j];
+//             arr[j] = arr[i];
+//             arr[i] = rev;
+
+//         }
+//         rev1.push(arr);
+//  return console.log(rev1);
+
+// }
+// let arrR = [1, 2, '3', 4,'four', 6, 'true'];
+// reverse1(arrR);
+
+
+
+
+// создание нового и реверс его
+// function reverced(arr) {
+//         let rarr = [];
+//         for( let i = 0; i < arr.length; i++){      
+//                         rarr.push(arr[i]); 
+//                    }       
+//                  let newArr = [];
+//                  let j = 1;  
+//                  let num;     
+//         while (j <= arr.length){
+//                  newArr.push(j*2);
+//                  j++;
+
+//         for(let r = 0, g = newArr.length-1; r < g; r++, g--){               
+//                  let rev = newArr[g];
+//                      newArr[g] = newArr[r];
+//                      newArr[r] = rev;
+//                    };
+//                         }          
+
+// console.log(newArr);                        
+// //console.log(newArr[3]);                        
+//                         // console.log(rarr);
+//         return console.log (rarr);
+
+// }
 
 // let num = [1, 2, 3, 6];
-// reverced1(num);
+// reverced(num);
+
+
+
+// создание нового и реверс его РАБОЧИЙ
+// function rever(arr){
+//         let rarr = [];
+//         let num = 0;
+//         for(let j = 0; j < arr.length; j++){
+//                 //let i = 0;
+//                 j = num;
+//                 rarr.push(j);
+//                 num++;
+//                 // rarr[i][j] = num;
+//                 // num++;
+                
+//                 // console.log(rarr);    
+//         }
+
+//         for(let r = 0, g = rarr.length-1; r < g; r++, g--){               
+//                                  let rev = rarr[g];
+//                                      rarr[g] =rarr[r];
+//                                      rarr[r] = rev;
+//                                    };
+//                     console.log(rarr);
+// }
+
+
+
+// rever([4,5,6,7]);
+
+
+
+// var arr1 = [1,2,3,4];
+
+// function reverse (arr){
+//         var len = arr.length;
+//         for (var i = 0; i < arr.length / 2; i++){
+//                 arr[i] = arr[len - 1 - i];
+
+//         }
+// }
+
+
+
+
+
 
 
 // function reverced1(arr) {
@@ -918,8 +1024,353 @@
 
 
 
+//   function obj(name, age) {
+//             this.name = name,
+//             this.age = age,
+//             this.grac = function gro(){
+//                        return this.age + 6;
+                        
+//             }    
+// }
+
+// let user = new obj('Petr', 46);
+
+// for (let prop in user){
+//         // let counter  = 0;
+//         // counter++;
+//         console.log(prop);
+// }
+
+
+// console.log(user.grac());
+// delete user.name;// удалили имя
+// console.log(user.name);
+
+// var arr = [1, 2, 15];
+// delete arr[3];
+// console.log(arr.length);
+// arr[3] = true;
+// console.log(arr);
+
+// arr.splice(2, 2, "You are..", "greate");
+// console.log(arr);
+
+// var sl = arr.slice(1, 3);
+// console.log(sl);
+// console.log(arr);
+//    var newArr = arr.concat(3, 4,  5);
+//    console.log(newArr);
+   
 
 
 
+// var j = arr.toString();
+// console.log(j.split()); // возвращает массив из стр в массив
+
+// class Cat {
+//         constructor(length, age){
+//                      this.length = length;
+//                      this.age = age;   
+//         }
+
+//         eat(){
+
+//         }
+
+// }
+// let cat1 = new Cat(1, 10);
+// console.log(cat1);
+
+
+// var a = ['a', 'b'];
+
+// console.log(a);
+
+// var b = {
+//         0: 'a',
+//         1: 'b',
+//         length: 2
+// };
+// console.log(b);
+
+
+
+// class animal {
+//        constructor(){
+//                this.age = 10;
+//        }
+
+       
+//         eat(){
+
+//         }
+// }
+
+// class cat extends animal{
+//         constructor() {
+//                 super();
+//                 this.mustache = true;
+//         }
+        
+//         getVoice(){
+//                 return 'miay-miay'
+//         }
+// };
+
+// class dog extends animal {
+//         constructor(){
+//                 super(); // вызов родитеьлского конструктора
+//                 this.mustache = false;
+//                 this.tale = true;
+//         }
+
+        
+//         getVoice(){
+//                 return 'gav gav'
+//         }
+// };
+
+
+
+// var cat1 = new cat();
+// var dog1 = new dog();
+
+// console.log(cat1.age);
+
+// console.log(dog1);
+
+
+
+
+
+
+// ДЗ 1 на 18.07.2018
+// function find(arr, c){
+//        // console.log(arr);
+//         //console.log(c);
+          
+        
+//         for (let i = 0; i < arr.length ; i++){ // пройдемся по массиву
+//                 //console.log(arr[i]);
+//              if ( arr[i] === c){
+//                 var num = i;// если полученный аргумент равен элементу из массива  
+//                  //console.log(num);// выводим индекс этого элемента                      
+//             }  
+                                             
+//         }  
+           
+//             arr.forEach(function(item, i, arr){
+//                 //console.log(`item: ${item}, index: ${i}`);
+//                 for (let k = arr.length-1; k >= 0; k--){ // идем с конца массива
+//                        if(item === arr[i-1]){ // если находим едентичный элемент с предыдушим
+//                          console.log(-1); // выводим -1
+                            
+                       
+                            
+//                        } 
+//                 }
+//             });
+                                                                          
+         
+//  return console.log(num);
+  
+         
+// }
+
+
+// find([1, 1,  true, 3, 'crew', 5], 'crew');
+
+// var arr = [1, 1,  true, 3, 'crew', 5];
+
+
+
+
+
+// function find(arr,c) 
+// {
+//     var arr_res = []; // результирующий массив
+
+//     /* проход по массиву слева-направо */
+//     for (var i=1; i < arr.length; i++) {                   
+       
+//         /* проходим массив в обратном порядке, начиная с элемента arr[i-1] */                   
+//         for (var j=i-1; j >= 0; j--) { 
+          
+          
+//             /* если ранее в массиве уже встречался элемент
+//                с таким же значением как и у текущего, 
+//                то помещаем это значение в результирующий массив
+//                (предварительно проверив, нет ли там уже такого значения), 
+//                завершаем внутренний цикл и переходим 
+//                на следующую итерацию внешнего цикла*/ 
+//              if (arr[j] == arr[i]) { 
+                
+                
+//                 var is_unique = true; // флаг уникальности элемента
+               
+//                 for (var k=0; k < arr_res.length; k++) {
+//                     if (arr_res[k] == arr[i]) {
+                        
+//                         is_unique = false;
+//                 //         //break;
+//                     }
+//                 }
+//                 if (is_unique) {
+//                     //console.log(-1);
+//                     arr_res.push(arr[i]); 
+//                 }
+//                 // break;
+//             } 
+//         } 
+//     } 
+//    return arr_res;
+// }
+// console.log(find(arr));
+ 
+ 
+
+
+
+
+
+
+
+// Дз 2 на 18.07.2018
+//  // this is how we will have random number 
+// function randomNumber(min, max) {
+//         return min + Math.floor(Math.random() * (max + 1 - min));
+// }
+
+// var arr =[];
+// var arrL = 10;
+// var num = 0;
+
+// //  this's how we gona have array
+// for (var i = 0; i < arrL; i++) {
+//     arr[i] = [];
+
+// for (var g = 0; g < arrL; g++) {
+//     arr[i][g] = num;
+//     num = randomNumber(1, 99) ;  // fill array with random number from 1 to 99
+       
+//         if(!(num % 5 === 0) ){ // check if our array el divide on 5
+//                 num = 'false'; // if not change it to 'false' 
+//         } 
+//     }
+          
+// }
+
+// console.table(arr);
+
+
+
+
+// let arr = [1, 2, true];
+
+// let n = arr.some(function(num){
+//         return num <= 3;
+        
+// });
+// console.log(n);
+
+
+
+
+
+
+// var arr = [1, 1, 4, 3, 7, 6, 5];
+// function compareNumbers(a, b){ /*Сортирует от меньшего к большему*/
+//         if(a > b){return 1;} // что-бы сделать реверс нужно 
+//         if(a < b){return -1;}// сменить знаки больше меньше в ифах
+// }
+// var s = arr.sort(compareNumbers)
+// let s = [].concat([1, 2], [3, 4]);
+// let s = arr.indexOf(1);
+
+//let s = arr.slice(0, 2);// [1,2]
+
+// arr.splice(0,2); // Результат: [3,4]
+
+// arr.splice(0,2 , 'asc', 'csa');// результат: ['asc', 'csa', 3, 4]
+// console.log(s); 
+
+
+
+ 
+// var store = {}, 
+// arr = [23, 325, 31231, 23];
+
+// for(var i =0; i < arr.length; i++){
+//         store[arr[i]] = i; // 
+// }
+// console.log(store);
+// console.log(store[325]);
+//  console.log(Object.keys(store)); // ключи объекта
+  
+
+// занятие 18.07.2018
+// var obj = {
+//         className: 'open menu'
+// }
+
+// function addClass(obj, str){
+//         var arr = obj.className.split(' ');
+//         if(arr.indexOf(str) > -1) {
+//                 return;
+//         }
+//                 arr.push(str);
+//                 obj.className = arr.join(' ');
+// }
+
+// addClass(obj, 'new');
+// console.log(obj.className);
+// addClass(obj, 'open')
+// console.log(obj.className);
+// addClass(obj, 'ept');
+// console.log(obj.className);
+
+// var arr = [1, -1, 2, 3];    
+// // arr.forEach((item, index, arrTemp) => {
+
+// // })
+
+// var positArr = arr.filter(function(number){
+//         return number > 0;
+// })
+
+// console.log(positArr);
+
+
+
+
+
+
+
+// var arr = ['We', 'have', 'lifes'];
+
+// var c = arr.map( function(arr){
+//        return arr.length; 
+// });
+// console.log(c);
+
+
+
+// function getSums(arr) {
+//         var result = [];
+//         if (!arr.length) return result;
+      
+//         arr.reduce(function(sum, item) {
+//           result.push(sum);
+//           return sum + item;
+//         });
+      
+//         return result;
+//       }
+      
+//       alert(getSums([1,2,3,4,5]));
+
+
+// var newDate = new Date;
+// console.log(newDate.getFullYear());
 
 
