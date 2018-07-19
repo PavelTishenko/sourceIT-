@@ -1370,7 +1370,13 @@
 //       alert(getSums([1,2,3,4,5]));
 
 
-// var newDate = new Date;
-// console.log(newDate.getFullYear());
 
+function getHandM(){
+        var newDate = new Date();
+        var H = ("0" + newDate.getHours()).slice(-2); // adding 0 in the begining of hours
+        var M = ("0" + newDate.getMinutes()).slice(-2); // adding 0 in the begining of minutes
 
+        console.log(`${H}:${M}`);
+}
+
+getHandM();
