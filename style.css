@@ -1,5 +1,5 @@
 body{
-  background-color: blanchedalmond
+  background-color: blanchedalmond;
 }
 h1{
   font-family: 'Courier New', Courier, monospace;
@@ -7,4 +7,8 @@ h1{
 
 .text{
   text-align: center;
+}
+
+table{
+ margin: auto;
 }

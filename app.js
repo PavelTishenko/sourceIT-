@@ -1308,6 +1308,7 @@
 //  console.log(Object.keys(store)); // ключи объекта
   
 
+
 // занятие 18.07.2018
 // var obj = {
 //         className: 'open menu'
@@ -1371,12 +1372,218 @@
 
 
 
-function getHandM(){
-        var newDate = new Date();
-        var H = ("0" + newDate.getHours()).slice(-2); // adding 0 in the begining of hours
-        var M = ("0" + newDate.getMinutes()).slice(-2); // adding 0 in the begining of minutes
 
-        console.log(`${H}:${M}`);
+
+// // ***************** clock with zero ******************** 
+// function getHandM(){
+//         var newDate = new Date();
+//         var H = ("0" + newDate.getHours()).slice(-2); // adding 0 in the begining of hours
+//         var M = ("0" + newDate.getMinutes()).slice(-2); // adding 0 in the begining of minutes
+
+//         console.log(`${H}:${M}`);
+// }
+
+// //getHandM();
+
+// setInterval(getHandM(), 1000);
+
+
+
+
+
+// var obj ={
+//         className: 'open menu'
+// };
+
+// function removeClass(obj, cls){
+//         var toArr = obj.className.split(' ');
+//         for(var i = 0; i < toArr.length; i++){
+//         if(toArr[i]== cls) {
+//                  toArr.splice(i, 1);
+//                  i--;
+//         }
+//     }
+//     obj.className = toArr.join(' ');
+// }
+
+// removeClass(obj, 'open')
+// console.log(obj);
+
+
+// function addClass(obj, cls){
+//           var toArr = obj.className.split(' ');// разделяем строку из className
+//           if(toArr.indexOf(cls) > -1 ){ // если cls  уже есть, то выходим(проверяем)
+//                 return;
+//           }
+//           toArr.push(cls); // пушим (добавляем) cls в созданный с помощью сплит массив
+//           obj.className = toArr.join(' ');//  склеиваем массив в строку с разделителем пробелом
+// }
+
+// addClass( obj, 'new');
+// console.log(obj);
+// addClass(obj, 'and it is work');
+// console.log(obj);
+
+
+
+//   чиать setInterval **************************************
+// 
+
+// var str = 'lkjasdhf';
+
+// function changeStr(str) {
+//         var str1 = '';
+//         var len = str.length;        
+//         var count = 1;
+        
+//         if (!len) {
+//             return str;    
+//         }
+//         for(var i = 1; i <= len; i++){
+//                  if(str[i] === str[i - 1]){
+//                         count++;
+//                  }else{
+//                          str+=count + str[i - 1];
+//                          count = 1;
+//                  }
+        
+//                 }        
+//                 return str1;
+//         }
+  
+        
+        
+// function changeStr(str) {
+// 	var newStr = '';
+// 	var count = 1;
+// 	var len = str.length;
+
+// 	for (var i = 0; i < len; i++) {
+// 		if(str[i]===str[i+1]) {
+// 			count++;
+// 			continue;
+// 		}
+		
+// 		newStr += `${count}${str[i]}`;
+// 		count = 1;
+// 	}	
+// 	return newStr;
+        
+// str = 'sdfsfsd';
+
+// changeStr(str);
+
+
+
+//  create arr with 10 elements
+// let arr = Array.from(Array(10).keys(), i => i+1);
+//  console.log(arr);
+  
+
+
+
+
+
+
+// let body = document.body;
+// console.log(body);
+
+// let el = document.documentElement.childNodes; 
+//         el = Array.prototype.slice.call(el); // превратили в массив
+
+// console.log(el);
+
+// ***************** ДЗ на 02.08.2018
+window.onload = function (){
+              
+        
+        var body = document.getElementsByTagName('body')[0];
+        var table = document.createElement('TABLE');
+        var tblB = document.createElement('TBODY');
+                table.appendChild(tblB);
+        
+        function randomNumber(min, max) {
+                        return min + Math.floor(Math.random() * (max + 1 - min));
+                }
+
+        for (var i = 0; i < 10; i++){
+                var tr = document.createElement('TR');
+                tblB.appendChild(tr)
+
+                for(var j = 0; j < 10; j++){
+                        var td = document.createElement('TD');
+                        td.textContent = randomNumber(1, 99);
+                        tr.appendChild(td);
+                         
+                }
+        }
+        body.appendChild(table);        
+        // tr.style.background = 'red';
+        console.log(tblB.rows.length);
+
+        
+        
+        
+        // top
+        for (var l = 0; l < tblB.rows.length - 9  ; l++){
+            for (var y = 0; y < tblB.rows.length; y++){
+                       tblB.rows[l].cells[y].style.background = 'red' 
+            }    
+
+        }
+
+        // right
+        for (var l = 1; l < tblB.rows.length; l++){
+                tblB.rows[l].cells[9].style.background = 'red';
+        }
+
+        // left
+        for (var l = 1; l < tblB.rows.length; l++){
+                tblB.rows[l].cells[0].style.background = 'red';   
+        }
+        
+        // bottom
+        for (var l = 9; l < tblB.rows.length  ; l++){
+                // tblB.rows[l].style.background = 'red';
+            for (var y = 0; y < tblB.rows.length; y++){
+                 tblB.rows[l].cells[y].style.background = 'red' 
+            }    
+        }
+
+        for (var d = 0, c = 0; d < tblB.rows.length , c < tblB.rows.length - 2; c++, d++) {
+                tblB.rows[d + 1].cells[c + 1].style.background = 'blue';
+
+        }
+
+
+          for (var d = 0, c = tblB.rows.length - 1; d < tblB.rows.length , c > 1 ; c--, d++) {
+                tblB.rows[d + 1].cells[c - 1].textContent = 'cool';
+
+        }
+        // tblB.rows[0].style.background = 'red';
+        // tblB.rows[9].style.background = 'red';
+        // tblB.rows[1].cells[0].style.background = 'red';
+        // tblB.rows[2].cells[0].style.background = 'red'; 
+        // tblB.rows[3].cells[0].style.background = 'red';
+        // tblB.rows[4].cells[0].style.background = 'red';
+        // tblB.rows[5].cells[0].style.background = 'red';
+        // tblB.rows[6].cells[0].style.background = 'red';
+        // tblB.rows[7].cells[0].style.background = 'red';
+        // tblB.rows[8].cells[0].style.background = 'red';
+        
+        // var tLength = tblB.rows[0].textContent;
+        // tLength = Array.prototype.slice.call(tLength);
+
+        
+        
+        
+        
+        // for (var r = 0; r < 10; j++){
+                 
+
+        // }       
+        
+
 }
 
-getHandM();
+
