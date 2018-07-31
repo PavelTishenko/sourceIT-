@@ -1503,8 +1503,13 @@ window.onload = function (){
                 table.appendChild(tblB);
         
         function randomNumber(min, max) {
-                        return min + Math.floor(Math.random() * (max + 1 - min));
+                 return min + Math.floor(Math.random() * (max + 1 - min));
                 }
+
+        function getRandomColor(){
+                var hex = Math.floor(Math.random() * 0xFFFFFF);
+                return "#" + ("000000" + hex.toString(16)).substr(-6);
+                }        
 
         for (var i = 0; i < 10; i++){
                 var tr = document.createElement('TR');
@@ -1513,17 +1518,12 @@ window.onload = function (){
                 for(var j = 0; j < 10; j++){
                         var td = document.createElement('TD');
                         td.textContent = randomNumber(1, 99);
-                        tr.appendChild(td);
-                         
+                        tr.appendChild(td);       
                 }
         }
         body.appendChild(table);        
-        // tr.style.background = 'red';
         console.log(tblB.rows.length);
-
-        
-        
-        
+           
         // top
         for (var l = 0; l < tblB.rows.length - 9  ; l++){
             for (var y = 0; y < tblB.rows.length; y++){
@@ -1551,7 +1551,7 @@ window.onload = function (){
         }
 
         for (var d = 0, c = 0; d < tblB.rows.length , c < tblB.rows.length - 2; c++, d++) {
-                tblB.rows[d + 1].cells[c + 1].style.background = 'blue';
+                tblB.rows[d + 1].cells[c + 1].style.background = getRandomColor();
 
         }
 
@@ -1560,30 +1560,6 @@ window.onload = function (){
                 tblB.rows[d + 1].cells[c - 1].textContent = 'cool';
 
         }
-        // tblB.rows[0].style.background = 'red';
-        // tblB.rows[9].style.background = 'red';
-        // tblB.rows[1].cells[0].style.background = 'red';
-        // tblB.rows[2].cells[0].style.background = 'red'; 
-        // tblB.rows[3].cells[0].style.background = 'red';
-        // tblB.rows[4].cells[0].style.background = 'red';
-        // tblB.rows[5].cells[0].style.background = 'red';
-        // tblB.rows[6].cells[0].style.background = 'red';
-        // tblB.rows[7].cells[0].style.background = 'red';
-        // tblB.rows[8].cells[0].style.background = 'red';
-        
-        // var tLength = tblB.rows[0].textContent;
-        // tLength = Array.prototype.slice.call(tLength);
-
-        
-        
-        
-        
-        // for (var r = 0; r < 10; j++){
-                 
-
-        // }       
-        
-
 }
 
 
