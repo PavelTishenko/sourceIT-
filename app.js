@@ -1493,6 +1493,12 @@
 
 // console.log(el);
 
+
+
+
+
+
+
 // ***************** ДЗ на 02.08.2018
 window.onload = function (){
               
@@ -1509,7 +1515,7 @@ window.onload = function (){
         function getRandomColor(){
                 var hex = Math.floor(Math.random() * 0xFFFFFF);
                 return "#" + ("000000" + hex.toString(16)).substr(-6);
-                }        
+        }  
 
         for (var i = 0; i < 10; i++){
                 var tr = document.createElement('TR');
@@ -1527,7 +1533,7 @@ window.onload = function (){
         // top
         for (var l = 0; l < tblB.rows.length - 9  ; l++){
             for (var y = 0; y < tblB.rows.length; y++){
-                       tblB.rows[l].cells[y].style.background = 'red' 
+                 tblB.rows[l].cells[y].style.background = 'red' 
             }    
 
         }
@@ -1544,14 +1550,14 @@ window.onload = function (){
         
         // bottom
         for (var l = 9; l < tblB.rows.length  ; l++){
-                // tblB.rows[l].style.background = 'red';
             for (var y = 0; y < tblB.rows.length; y++){
-                 tblB.rows[l].cells[y].style.background = 'red' 
+                 tblB.rows[l].cells[y].style.background = 'red'; 
             }    
         }
 
         for (var d = 0, c = 0; d < tblB.rows.length , c < tblB.rows.length - 2; c++, d++) {
                 tblB.rows[d + 1].cells[c + 1].style.background = getRandomColor();
+                
 
         }
 
